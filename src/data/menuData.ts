@@ -1,0 +1,60 @@
+export const mockRoutesData = [
+  {
+    id: '1',
+    title: '首页',
+    name: 'home',
+    path: '/home',
+    meta: { hidden: false, btn: ['view', 'edit'] },
+    component: '/home.vue',
+  },
+  {
+    id: '2',
+    title: '用户中心',
+    name: 'user',
+    path: '/user',
+    meta: { hidden: false },
+    children: [
+      {
+        id: '21',
+        title: '基本资料',
+        name: 'userInfor',
+        path: '/user/infor',
+        meta: { hidden: false },
+        component: '/user/infor.vue',
+      },
+      {
+        id: '22',
+        title: '安全设置',
+        name: 'userSecure',
+        path: '/user/secure',
+        meta: { hidden: false },
+        component: '/user/secure.vue',
+      },
+    ],
+  },
+  {
+    id: '3',
+    title: '应用中心',
+    name: 'application',
+    path: '/application',
+    meta: { hidden: false },
+    children: [
+      {
+        id: '31',
+        title: '我的应用',
+        name: 'myApplication',
+        path: '/application/myApplication',
+        meta: { hidden: false },
+        component: '/application/myApplication.vue',
+      },
+      {
+        id: '32',
+        title: '安全设置',
+        name: 'order',
+        path: '/application/order',
+        meta: { hidden: false },
+        component: '/application/order.vue',
+      },
+    ],
+  },
+]
